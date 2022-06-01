@@ -1,8 +1,8 @@
 bool check(ll mid,vi &v){
     
 }
-    ll hi = ; // min possible value;
-    ll lo = ; // max possible value;
+    ll hi = ; // max possible value;
+    ll lo = ; // min possible value;
     ll ans = ; // default answer
    
    while(hi>=lo){
