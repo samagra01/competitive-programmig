@@ -6,3 +6,12 @@ vector<ll> Binary_representation(ll x){
       }
     return ans;
 }
+// recurssive method
+void printbin(unsigned int x)
+{
+    if(x>1)
+    {
+        printbin(x/2);    // recursive call to rest of the bits
+    }
+    cout<<(x%2);          // print the last bit
+}
