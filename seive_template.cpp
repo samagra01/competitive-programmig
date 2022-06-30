@@ -21,6 +21,16 @@ void manipulated_seive(int N) {
         idx[prime[i]] = i + 1;
     }
 }
+// prime factors in log n using seive // up 1e6
+vector<int> primeFactors(int n) {
+    vector<int> factors;
+    while (n > 1) {
+        factors.push_back(SPF[n]);
+        n /= SPF[n];
+    }
+    return factors;
+}
+// prime factors in root  n // can work for any range // 
 vector<ll> primeFactors(ll n) {
     vector<ll> factors;
     while (n % 2 == 0) {
