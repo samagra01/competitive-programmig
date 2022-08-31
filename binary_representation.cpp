@@ -15,3 +15,22 @@ void printbin(unsigned int x)
     }
     cout<<(x%2);          // print the last bit
 }
+// one important greedy approach for  problems 
+ll get_min_cost_for_number(ll A, ll X) {
+    // finding minimum cost // 
+	for (ll digit = 32; digit >= 0; digit--) {
+		if (!(X & ((ll)1 << digit))) {
+			// checking if can on a particular bit 
+			ll X_tmp = X;
+			for (ll dd = digit - 1; dd >= 0; dd--) {
+				X_tmp |= (ll)1 << dd;
+			}
+			if (X_tmp < A) {
+				X |= (ll)1 << digit;
+			}
+		}
+	}
+	// i think this is any imp greedy approach // 
+
+	return X - A;
+}
