@@ -54,7 +54,7 @@ struct UnionFind {
     int par[100010];
     int rank[100010];
     void init() {
-        for (int i = 1; i <= 100000; i++) {
+        for (int i = 0; i <= 100000; i++) {
             par[i] = i;
             rank[i] = 1;
         }
@@ -65,7 +65,7 @@ struct UnionFind {
         else return par[x] = find(par[x]);
     }
 
-    int unite(int x, int y) {
+    void unite(int x, int y) {
         int rootx = find(x);
         int rooty = find(y);
         if(rank[rootx]<rank[rooty])swap(x,y);
