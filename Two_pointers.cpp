@@ -1,4 +1,10 @@
-  // DS for two pointers condition checking //  <<L< THIS METHOD IF FOR ZERO BASED INDEXING >>>
+//  so  condition for two pointers is :- 
+//    L < L1
+//    R <= R1
+//  see if u can apply b.s. at any starting point is there a max. 
+
+
+// DS for two pointers condition checking //  <<L< THIS METHOD IF FOR ZERO BASED INDEXING >>>
    ll zero_ct = 0;
    // pointers
    ll head = -1,tail = 0;
