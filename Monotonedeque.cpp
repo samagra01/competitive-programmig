@@ -28,3 +28,24 @@ public:
 		m_deque.pop_front();
 	}
 };
+
+
+struct Monotone_queue {
+	deque<int> dq;
+
+	void insert(int val) {
+		while (!dq.empty() && dq.back() < val) {
+			dq.pop_back();
+		}
+		dq.push_back(val);
+	}
+	void remove(int val) {
+		if (val == dq.front()) {
+			dq.pop_front();
+		}
+	}
+	int Maxi() {
+		return dq.front();
+	}
+
+};
