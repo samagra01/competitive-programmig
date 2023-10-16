@@ -41,7 +41,7 @@ struct UnionFind {
     int s(ll a) {
         return rank[a];
     }
-    int print() {
+    void print() {
         for (int i = 1; i <= n; i++) {
             cout << parent[i] << " ";
         } cout << endl;
